@@ -224,6 +224,64 @@
         width: 100%;
       }
     }
+
+      .honor-list {
+  background: white;
+  padding: 22px 26px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.honor-item {
+  display: grid;
+  grid-template-columns: 18px 1fr 100px;
+  gap: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 17px;
+  align-items: start;
+}
+
+.honor-item::before {
+  content: "•";
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.honor-item:last-child {
+  border-bottom: none;
+}
+
+.honor-item span:first-of-type {
+  font-weight: 600;
+}
+
+.honor-item em {
+  font-weight: 400;
+  font-style: normal;
+  color: #555;
+}
+
+.honor-date {
+  text-align: right;
+  color: #444;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .honor-item {
+    grid-template-columns: 18px 1fr;
+    gap: 8px;
+  }
+
+  .honor-date {
+    grid-column: 2;
+    text-align: left;
+  }
+}    
   </style>
 </head>
 
